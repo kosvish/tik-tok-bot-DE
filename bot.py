@@ -331,7 +331,7 @@ async def cmd_start(message: types.Message, state: FSMContext):
             [InlineKeyboardButton(text=LEXICON['btn_informed'], callback_data="start_earning")]
         ])
         await message.answer_animation(
-            animation='СЮДА_FILE_ID',
+            animation='CgACAgEAAxkBAAM7ajGzjTM9q3c3KfAdpyz_t06Os0cAAoAIAAKdLJBF7csn3KcxzwM8BA',
             caption=LEXICON['welcome_msg'].format(name=user_name),
             reply_markup=keyboard,
             parse_mode="HTML"
@@ -373,12 +373,7 @@ async def show_main_menu_callback(callback: types.CallbackQuery, state: FSMConte
     await show_main_menu(callback.message, edit=True)
     await callback.answer()
 
-@dp.message(F.animation)
-async def get_animation_id(message: types.Message):
-    await message.reply(
-        f"🎬 <b>Animation File ID:</b>\n\n<code>{message.animation.file_id}</code>",
-        parse_mode="HTML"
-    )
+
 @dp.callback_query(F.data == "start_earning")
 async def process_start_earning(callback: types.CallbackQuery, state: FSMContext):
     await callback.answer()
