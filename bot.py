@@ -611,7 +611,12 @@ async def process_wallet_details(message: types.Message, state: FSMContext):
     )
     await state.set_state(None)
 
-
+@dp.message(F.animation)
+async def get_animation_id(message: types.Message):
+    await message.reply(
+        f"🎬 <b>Animation File ID:</b>\n\n<code>{message.animation.file_id}</code>",
+        parse_mode="HTML"
+    )
 @dp.callback_query(F.data == "verify_subscription")
 async def check_user_subscription(callback: types.CallbackQuery):
     try:
