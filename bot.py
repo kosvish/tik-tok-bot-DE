@@ -224,6 +224,13 @@ async def get_video_id(message: types.Message):
         parse_mode="HTML"
     )
 
+@dp.message(F.animation)
+async def get_animation_id(message: types.Message):
+    await message.reply(
+        f"🎬 <b>Animation File ID:</b>\n\n<code>{message.animation.file_id}</code>",
+        parse_mode="HTML"
+    )
+
 @dp.message(F.photo)
 async def handle_photo(message: types.Message, state: FSMContext):
     current_state = await state.get_state()
