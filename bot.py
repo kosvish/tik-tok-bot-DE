@@ -533,7 +533,7 @@ async def process_profile(callback: types.CallbackQuery, state: FSMContext):
     )
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text=LEXICON['btn_earn'], callback_data="earn")],
-        [InlineKeyboardButton(text="🎁 Ricevi 10.000 €", url="https://t.me/+06DdEkcYVHtmYTIy")],
+        [InlineKeyboardButton(text="🎁 Ricevi 10.000 €", url="https://t.me/+5ZEsXPYgyA9jZDQy")],
         [InlineKeyboardButton(text=LEXICON['btn_back'], callback_data="main_menu")]
     ])
     try:
@@ -607,14 +607,14 @@ async def check_user_subscription(callback: types.CallbackQuery):
         if member.status in ['left', 'kicked']:
             await callback.answer("❌ Non sei ancora iscritto!", show_alert=True)
             keyboard = InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=LEXICON['btn_subscribe'], url="https://t.me/+Fdt1AaN0Pu9iNGNi")],
+                [InlineKeyboardButton(text=LEXICON['btn_subscribe'], url="https://t.me/+5ZEsXPYgyA9jZDQy")],
                 [InlineKeyboardButton(text=LEXICON['btn_check_sub_now'], callback_data="verify_subscription")]
             ])
             await callback.message.edit_text(LEXICON['sub_required_text'], reply_markup=keyboard, parse_mode="HTML")
         else:
             await callback.answer("✅ Verifica completata!")
             keyboard = InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text="📱 Contatta il Manager", url="https://t.me/monica_guadagno")],
+                [InlineKeyboardButton(text="📱 Contatta il Manager", url="https://t.me/AmaliaHoffman")],
                 [InlineKeyboardButton(text=LEXICON['btn_back'], callback_data="main_menu")]
             ])
             await callback.message.edit_text(LEXICON['sub_success'], reply_markup=keyboard, parse_mode="HTML")
@@ -626,7 +626,7 @@ async def check_user_subscription(callback: types.CallbackQuery):
 @dp.callback_query(F.data == "partners")
 async def process_partners_menu(callback: types.CallbackQuery, state: FSMContext):
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=LEXICON['btn_partner_channel'], url="https://t.me/+Fdt1AaN0Pu9iNGNi")],
+        [InlineKeyboardButton(text=LEXICON['btn_partner_channel'], url="https://t.me/+5ZEsXPYgyA9jZDQy")],
         [InlineKeyboardButton(text=LEXICON['btn_back'], callback_data="main_menu")]
     ])
     try:
