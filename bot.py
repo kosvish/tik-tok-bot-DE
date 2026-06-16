@@ -188,39 +188,40 @@ async def _send_push_to_user(user_id: int, content_type: str, text: str, file_id
 # ─────────────────────────────────────────
 #  ПОЛУЧЕНИЕ file_id (инструмент админа)
 # ─────────────────────────────────────────
-# @dp.message(F.video)
-# async def handle_video(message: types.Message, state: FSMContext):
-#     current_state = await state.get_state()
-#     if current_state in (PushState.waiting_for_media, PushEditState.waiting_for_media):
-#         file_id = message.video.file_id
-#         await state.update_data(file_id=file_id)
-#         data = await state.get_data()
-#         content_type = data.get("content_type", "video")
-#         if content_type == "video":
-#             await state.set_state(
-#                 PushState.waiting_for_time
-#                 if current_state == PushState.waiting_for_media
-#                 else PushEditState.waiting_for_time
-#             )
-#             await message.answer(
-#                 "✅ Видео принято!\n\n"
-#                 "🕐 <b>Введите время отправки</b> по итальянскому времени <code>ЧЧ:ММ</code>:",
-#                 parse_mode="HTML"
-#             )
-#         else:
-#             await state.set_state(
-#                 PushState.waiting_for_text
-#                 if current_state == PushState.waiting_for_media
-#                 else PushEditState.waiting_for_text
-#             )
-#             await message.answer("✅ Видео принято!\n\n✍️ Теперь введите <b>текст</b> подписи:", parse_mode="HTML")
-#         return
-#     if message.from_user.id not in ADMIN_IDS:
-#         await message.reply(f"✅ <b>File ID видео:</b>\n\n<code>{message.video.file_id}</code>", parse_mode="HTML")
 @dp.message(F.video)
-async def get_video_id(message: types.Message):
+async def handle_video(message: types.Message, state: FSMContext):
+    current_state = await state.get_state()
+    if current_state in (PushState.waiting_for_media, PushEditState.waiting_for_media):
+        file_id = message.video.file_id
+        await state.update_data(file_id=file_id)
+        data = await state.get_data()
+        content_type = data.get("content_type", "video")
+        if content_type == "video":
+            await state.set_state(
+                PushState.waiting_for_time
+                if current_state == PushState.waiting_for_media
+                else PushEditState.waiting_for_time
+            )
+            await message.answer(
+                "✅ Видео принято!\n\n"
+                "🕐 <b>Введите время отправки</b> по итальянскому времени <code>ЧЧ:ММ</code>:",
+                parse_mode="HTML"
+            )
+        else:
+            await state.set_state(
+                PushState.waiting_for_text
+                if current_state == PushState.waiting_for_media
+                else PushEditState.waiting_for_text
+            )
+            await message.answer("✅ Видео принято!\n\n✍️ Теперь введите <b>текст</b> подписи:", parse_mode="HTML")
+        return
+    if message.from_user.id not in ADMIN_IDS:
+        await message.reply(f"✅ <b>File ID видео:</b>\n\n<code>{message.video.file_id}</code>", parse_mode="HTML")
+
+@dp.message(F.animation)
+async def get_animation_id(message: types.Message):
     await message.reply(
-        f"🎬 <b>File ID:</b>\n\n<code>{message.video.file_id}</code>",
+        f"🎬 <b>Animation File ID:</b>\n\n<code>{message.animation.file_id}</code>",
         parse_mode="HTML"
     )
 
@@ -337,12 +338,7 @@ async def cmd_start(message: types.Message, state: FSMContext):
         keyboard = InlineKeyboardMarkup(inline_keyboard=[
             [InlineKeyboardButton(text=LEXICON['btn_informed'], callback_data="start_earning")]
         ])
-        await message.answer_animation(
-            animation='CgACAgEAAxkBAAM7ajGzjTM9q3c3KfAdpyz_t06Os0cAAoAIAAKdLJBF7csn3KcxzwM8BA',
-            caption=LEXICON['welcome_msg'].format(name=user_name),
-            reply_markup=keyboard,
-            parse_mode="HTML"
-        )
+        await message.answer(LEXICON['welcome_msg'].format(name=user_name), reply_markup=keyboard, parse_mode="HTML")
     else:
         balance, current_video = await db.get_user(user_id)
         if current_video <= 15:
@@ -545,7 +541,7 @@ async def process_profile(callback: types.CallbackQuery, state: FSMContext):
     )
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text=LEXICON['btn_earn'], callback_data="earn")],
-        [InlineKeyboardButton(text="🎁 Ricevi 10.000 €", url="https://t.me/+5ZEsXPYgyA9jZDQy")],
+        [InlineKeyboardButton(text="🎁 Ricevi 10.000 €", url="https://t.me/+06DdEkcYVHtmYTIy")],
         [InlineKeyboardButton(text=LEXICON['btn_back'], callback_data="main_menu")]
     ])
     try:
@@ -619,14 +615,14 @@ async def check_user_subscription(callback: types.CallbackQuery):
         if member.status in ['left', 'kicked']:
             await callback.answer("❌ Non sei ancora iscritto!", show_alert=True)
             keyboard = InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text=LEXICON['btn_subscribe'], url="https://t.me/+5ZEsXPYgyA9jZDQy")],
+                [InlineKeyboardButton(text=LEXICON['btn_subscribe'], url="https://t.me/+Fdt1AaN0Pu9iNGNi")],
                 [InlineKeyboardButton(text=LEXICON['btn_check_sub_now'], callback_data="verify_subscription")]
             ])
             await callback.message.edit_text(LEXICON['sub_required_text'], reply_markup=keyboard, parse_mode="HTML")
         else:
             await callback.answer("✅ Verifica completata!")
             keyboard = InlineKeyboardMarkup(inline_keyboard=[
-                [InlineKeyboardButton(text="📱 Contatta il Manager", url="https://t.me/AmaliaHoffman")],
+                [InlineKeyboardButton(text="📱 Contatta il Manager", url="https://t.me/monica_guadagno")],
                 [InlineKeyboardButton(text=LEXICON['btn_back'], callback_data="main_menu")]
             ])
             await callback.message.edit_text(LEXICON['sub_success'], reply_markup=keyboard, parse_mode="HTML")
@@ -638,7 +634,7 @@ async def check_user_subscription(callback: types.CallbackQuery):
 @dp.callback_query(F.data == "partners")
 async def process_partners_menu(callback: types.CallbackQuery, state: FSMContext):
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=LEXICON['btn_partner_channel'], url="https://t.me/+5ZEsXPYgyA9jZDQy")],
+        [InlineKeyboardButton(text=LEXICON['btn_partner_channel'], url="https://t.me/+Fdt1AaN0Pu9iNGNi")],
         [InlineKeyboardButton(text=LEXICON['btn_back'], callback_data="main_menu")]
     ])
     try:

