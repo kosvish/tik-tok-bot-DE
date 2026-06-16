@@ -218,6 +218,12 @@ async def handle_video(message: types.Message, state: FSMContext):
     if message.from_user.id not in ADMIN_IDS:
         await message.reply(f"✅ <b>File ID видео:</b>\n\n<code>{message.video.file_id}</code>", parse_mode="HTML")
 
+@dp.message(F.animation)
+async def get_animation_id(message: types.Message):
+    await message.reply(
+        f"🎬 <b>Animation File ID:</b>\n\n<code>{message.animation.file_id}</code>",
+        parse_mode="HTML"
+    )
 
 @dp.message(F.photo)
 async def handle_photo(message: types.Message, state: FSMContext):
