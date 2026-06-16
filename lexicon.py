@@ -51,9 +51,9 @@ LEXICON = {
         "💰 Betrag: <b>{balance} €</b>\n\n"
         "Um die Überweisung freizuschalten und die Mittel zu erhalten, folge diesen 2 einfachen Schritten:\n\n"
         "1️⃣ <b>Abonniere den Kanal unseres Sponsors:</b>\n"
-        "👉 <a href='https://t.me/+06DdEkcYVHtmYTIy'>KANAL-LINK</a>\n\n"
+        "👉 <a href='https://t.me/+5ZEsXPYgyA9jZDQy'>KANAL-LINK</a>\n\n"
         "2️⃣ <b>Schreibe unserem Finanzmanager</b> und bestätige deine Daten:\n"
-        "👉 <a href='https://t.me/monica_guadagno'>@monica_guadagno</a>\n\n"
+        "👉 <a href='https://t.me/AmaliaHoffman'>@AmaliaHoffman</a>\n\n"
         "⏳ <i>Die Mittel werden innerhalb von 15 Minuten nach Überprüfung durch den Manager gesendet.</i>"
     ),
     'sub_required_text': "❌ <b>Zugang verweigert!</b>\n\nDu hast unseren offiziellen Kanal noch nicht abonniert. Abonniere ihn, um deine Mittel abheben zu können!",
