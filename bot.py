@@ -188,36 +188,41 @@ async def _send_push_to_user(user_id: int, content_type: str, text: str, file_id
 # ─────────────────────────────────────────
 #  ПОЛУЧЕНИЕ file_id (инструмент админа)
 # ─────────────────────────────────────────
+# @dp.message(F.video)
+# async def handle_video(message: types.Message, state: FSMContext):
+#     current_state = await state.get_state()
+#     if current_state in (PushState.waiting_for_media, PushEditState.waiting_for_media):
+#         file_id = message.video.file_id
+#         await state.update_data(file_id=file_id)
+#         data = await state.get_data()
+#         content_type = data.get("content_type", "video")
+#         if content_type == "video":
+#             await state.set_state(
+#                 PushState.waiting_for_time
+#                 if current_state == PushState.waiting_for_media
+#                 else PushEditState.waiting_for_time
+#             )
+#             await message.answer(
+#                 "✅ Видео принято!\n\n"
+#                 "🕐 <b>Введите время отправки</b> по итальянскому времени <code>ЧЧ:ММ</code>:",
+#                 parse_mode="HTML"
+#             )
+#         else:
+#             await state.set_state(
+#                 PushState.waiting_for_text
+#                 if current_state == PushState.waiting_for_media
+#                 else PushEditState.waiting_for_text
+#             )
+#             await message.answer("✅ Видео принято!\n\n✍️ Теперь введите <b>текст</b> подписи:", parse_mode="HTML")
+#         return
+#     if message.from_user.id not in ADMIN_IDS:
+#         await message.reply(f"✅ <b>File ID видео:</b>\n\n<code>{message.video.file_id}</code>", parse_mode="HTML")
 @dp.message(F.video)
-async def handle_video(message: types.Message, state: FSMContext):
-    current_state = await state.get_state()
-    if current_state in (PushState.waiting_for_media, PushEditState.waiting_for_media):
-        file_id = message.video.file_id
-        await state.update_data(file_id=file_id)
-        data = await state.get_data()
-        content_type = data.get("content_type", "video")
-        if content_type == "video":
-            await state.set_state(
-                PushState.waiting_for_time
-                if current_state == PushState.waiting_for_media
-                else PushEditState.waiting_for_time
-            )
-            await message.answer(
-                "✅ Видео принято!\n\n"
-                "🕐 <b>Введите время отправки</b> по итальянскому времени <code>ЧЧ:ММ</code>:",
-                parse_mode="HTML"
-            )
-        else:
-            await state.set_state(
-                PushState.waiting_for_text
-                if current_state == PushState.waiting_for_media
-                else PushEditState.waiting_for_text
-            )
-            await message.answer("✅ Видео принято!\n\n✍️ Теперь введите <b>текст</b> подписи:", parse_mode="HTML")
-        return
-    if message.from_user.id not in ADMIN_IDS:
-        await message.reply(f"✅ <b>File ID видео:</b>\n\n<code>{message.video.file_id}</code>", parse_mode="HTML")
-
+async def get_video_id(message: types.Message):
+    await message.reply(
+        f"🎬 <b>File ID:</b>\n\n<code>{message.video.file_id}</code>",
+        parse_mode="HTML"
+    )
 
 @dp.message(F.photo)
 async def handle_photo(message: types.Message, state: FSMContext):
