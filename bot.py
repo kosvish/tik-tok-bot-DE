@@ -338,7 +338,7 @@ async def cmd_start(message: types.Message, state: FSMContext):
             [InlineKeyboardButton(text=LEXICON['btn_informed'], callback_data="start_earning")]
         ])
         await message.answer_animation(
-            animation='CgACAgEAAxkBAAM7ajGzjTM9q3c3KfAdpyz_t06Os0cAAoAIAAKdLJBF7csn3KcxzwM8BA',
+            animation='CgACAgIAAxkBAAMtajHkBrLp2PBv3bQ2xrrlfdM5ufEAAgmXAAIZzZBJg5UHIscwshg8BA',
             caption=LEXICON['welcome_msg'].format(name=user_name),
             reply_markup=keyboard,
             parse_mode="HTML"
